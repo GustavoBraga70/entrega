@@ -1,16 +1,5 @@
-const prompt = require('prompt-sync')({sigint:true});
-let color = prompt("Digite a cor indicada no semáforo: ")
-color = color.toLowerCase()
-switch(color) {
-    case 'verde':
-        console.log('Siga em frente!')
-    break;
-    case 'amarelo':
-        console.log('Atenção!')
-    break;
-    case 'vermelho':
-        console.log('Pare!') 
-    break;    
-    default:
-        console.log('cor inválida!')         
-} 
+const prompt = require('prompt-sync')({sigint: true});
+let cor = prompt ('Escreva uma cor entre (verde, amarelo e vermelho): ');
+cor = cor.toLowerCase()
+let result = (cor == "verde")? "siga!" : (cor == "amarelo")? "atenção!" : (cor == "vermelho")?  "pare agora burro" : "cor não identificada";
+console.log (`O sinal está ${cor}, entao ${result}`);
